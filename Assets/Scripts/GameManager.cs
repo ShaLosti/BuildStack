@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,7 +14,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (MovingCube.CurrentCube != null)
+            if (MovingCube.CurrentCube != null && MovingCube.CurrentCube.name != "StartCube")
                 MovingCube.CurrentCube.Stop();
 
             spawnerIndex = spawnerIndex == 0 ? 1 : 0;

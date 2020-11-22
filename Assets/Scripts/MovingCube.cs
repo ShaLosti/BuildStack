@@ -23,6 +23,7 @@ public class MovingCube : MonoBehaviour
             LastCube = null;
             CurrentCube = null;
             SceneManager.LoadScene(0);
+            return;
         }
 
         float direction = hangover > 0 ? 1f : -1f;
@@ -106,7 +107,7 @@ public class MovingCube : MonoBehaviour
 
     private Color GetRandomColor()
     {
-        return new Color(UnityEngine.Random.Range(0, 1f), UnityEngine.Random.Range(0, 1f), UnityEngine.Random.Range(0, 1f));
+        return new Color(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f));
     }
 
     private void Start()
